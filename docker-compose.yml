@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - 7000:5432
+    environment:
+      POSTGRES_USER: instadb
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: instadb
