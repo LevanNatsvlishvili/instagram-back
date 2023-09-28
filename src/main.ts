@@ -6,11 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   // Turns on validator for request types
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-    }),
-  );
+  app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
   await app.listen(4000);
 }
 bootstrap();
