@@ -7,7 +7,7 @@ import { Request } from 'express';
 export class UsersController {
   @UseGuards(AuthGuard('jwt'))
   @Get('me')
-  getMe(@Req() req: Request) {
+  getActiveUser(@Req() req: Request) {
     return req.user;
   }
 }
