@@ -8,7 +8,6 @@ import { GetUser } from 'src/auth/decorator';
 export class UsersController {
   @Get('me')
   getActiveUser(@GetUser('') users: Users) {
-    // return req.user;
     return users;
   }
 }

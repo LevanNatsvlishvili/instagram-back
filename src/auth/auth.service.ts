@@ -53,7 +53,6 @@ export class authService {
 
     if (!pwMatch) throw new ForbiddenException('Incorrect credentials');
     return this.generateToken(user.id, user.email);
-    return user;
   }
 
   async generateToken(
